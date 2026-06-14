@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="Adventure Voter">
+  <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="3" opacity="0.55"/>
+  <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 7" opacity="0.4"/>
+  <g stroke="currentColor" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="10" x2="100" y2="24"/>
+    <line x1="100" y1="176" x2="100" y2="190"/>
+    <line x1="10" y1="100" x2="24" y2="100"/>
+    <line x1="176" y1="100" x2="190" y2="100"/>
+  </g>
+  <circle cx="100" cy="66" r="13" fill="#e0a458"/>
+  <path d="M40 138 L78 92 L104 124 L132 84 L160 138 Z" fill="#e0a458"/>
+  <path d="M132 84 L120 100 L132 100 L140 90 Z" fill="#f7f1e3" opacity="0.9"/>
+  <path d="M78 92 L70 102 L84 102 Z" fill="#f7f1e3" opacity="0.9"/>
+  <line x1="40" y1="138" x2="160" y2="138" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+</svg>

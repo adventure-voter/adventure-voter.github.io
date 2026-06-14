@@ -1,0 +1,25 @@
+{
+  "generated": "2026-06-14T00:00:00Z",
+  "presentations": [
+    {
+      "slug": "getting-started",
+      "title": "Getting Started",
+      "description": "An introduction to Adventure Voter and how to wire it into your own project.",
+      "image": "catalog/getting-started/cover.svg",
+      "download": "catalog/getting-started/getting-started.tar.gz",
+      "size": 676,
+      "updated": "2026-06-14",
+      "tags": ["intro", "setup"]
+    },
+    {
+      "slug": "ballot-design",
+      "title": "Ballot Design",
+      "description": "Patterns and anti-patterns for designing fair, readable ballots.",
+      "image": "catalog/ballot-design/cover.svg",
+      "download": "catalog/ballot-design/ballot-design.tar.gz",
+      "size": 668,
+      "updated": "2026-06-10",
+      "tags": ["design", "patterns"]
+    }
+  ]
+}

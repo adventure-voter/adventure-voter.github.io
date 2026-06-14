@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventure Voter — Presentation Catalog</title>
+  <meta name="description" content="A catalog of downloadable presentations for the Adventure Voter project.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__topo" aria-hidden="true">
+      <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M-50 480 Q300 360 600 440 T1250 380"/>
+          <path d="M-50 520 Q300 410 600 490 T1250 430"/>
+          <path d="M-50 560 Q300 460 600 540 T1250 480"/>
+          <path d="M-50 200 Q350 120 700 200 T1250 160"/>
+          <path d="M-50 250 Q350 170 700 250 T1250 210"/>
+          <path d="M-50 300 Q350 230 700 300 T1250 270"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero__content">
+      <img class="hero__logo" src="assets/img/logo.svg" alt="Adventure Voter logo">
+      <h1 class="hero__title">Adventure Voter</h1>
+      <p class="hero__tagline">Presentation Catalog</p>
+      <p class="hero__lead">
+        A trailhead for talks, decks, and slide bundles built around the
+        <strong>Adventure Voter</strong> project. Browse the catalog below,
+        download any presentation as an archive, and use it in your own project.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://github.com/Skarlso/adventure-voter" target="_blank" rel="noopener">
+          View the project on GitHub
+        </a>
+        <a class="btn btn--ghost" href="#catalog">Browse the catalog</a>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#catalog" aria-label="Scroll to catalog">
+      <span class="chevron"></span>
+    </a>
+  </header>
+
+  <main id="catalog" class="catalog">
+    <div class="catalog__head">
+      <h2 class="catalog__title">The Catalog</h2>
+      <p class="catalog__sub">Each card is a presentation you can download and reuse.</p>
+    </div>
+
+    <div id="catalog-grid" class="grid" aria-live="polite">
+      <p class="grid__state">Loading the catalog…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Built for the
+      <a href="https://github.com/Skarlso/adventure-voter" target="_blank" rel="noopener">Adventure Voter</a>
+      project. Presentations live in the
+      <a href="https://github.com/adventure-voter/catalog" target="_blank" rel="noopener">catalog</a>
+      repository.
+    </p>
+  </footer>
+
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>
