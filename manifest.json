@@ -1,4 +1,16 @@
 {
-  "generated": "2026-06-14T17:04:11Z",
-  "presentations": []
+  "generated": "2026-06-15T06:27:52Z",
+  "presentations": [
+    {
+      "slug": "getting-started",
+      "title": "Getting Started",
+      "description": "This is a demo presentation for Adventure Voter.",
+      "image": "catalog/getting-started/cover.svg",
+      "download": "catalog/getting-started/getting-started.tar.gz",
+      "size": 4987,
+      "updated": "2026-06-15T08:25:50+02:00",
+      "tags": null,
+      "treeSha": "acf1f516c4f89bc7bf89bb4381cd2f73d58aeb3a"
+    }
+  ]
 }
