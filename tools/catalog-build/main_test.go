@@ -103,12 +103,13 @@ func git(t *testing.T, dir string, args ...string) {
 func writeDeck(t *testing.T, root, slug, title, body string) {
 	t.Helper()
 	dir := filepath.Join(root, slug)
-	if err := os.MkdirAll(dir, 0o755); err != nil {
+	content := filepath.Join(dir, "presentation")
+	if err := os.MkdirAll(content, 0o755); err != nil {
 		t.Fatal(err)
 	}
 	mustWrite(t, filepath.Join(dir, "index.yaml"),
-		"title: "+title+"\ndescription: a sample deck\nimage: cover.svg\ntags: [demo]\n")
-	mustWrite(t, filepath.Join(dir, "slides.md"), body)
+		"title: "+title+"\nlocation: presentation\ndescription: a sample deck\nimage: cover.svg\ntags: [demo]\n")
+	mustWrite(t, filepath.Join(content, "slides.md"), body)
 	mustWrite(t, filepath.Join(dir, "cover.svg"), "<svg/>")
 }
 

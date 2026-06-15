@@ -23,6 +23,7 @@ type Index struct {
 	Description string   `yaml:"description"`
 	Image       string   `yaml:"image"`
 	Tags        []string `yaml:"tags"`
+	Location    string   `yaml:"location"`
 }
 
 type Entry struct {
@@ -175,6 +176,18 @@ func buildDeck(catalog, out, slug, tree string) (Entry, error) {
 	if idx.Title == "" {
 		idx.Title = slug
 	}
+	if idx.Location == "" {
+		return Entry{}, fmt.Errorf("index.yaml: location is required")
+	}
+
+	content := filepath.Join(src, idx.Location)
+	info, err := os.Stat(content)
+	if err != nil {
+		return Entry{}, fmt.Errorf("location %q: %w", idx.Location, err)
+	}
+	if !info.IsDir() {
+		return Entry{}, fmt.Errorf("location %q is not a directory", idx.Location)
+	}
 
 	dest := filepath.Join(out, "catalog", slug)
 	if err := os.MkdirAll(dest, 0o755); err != nil {
@@ -182,7 +195,7 @@ func buildDeck(catalog, out, slug, tree string) (Entry, error) {
 	}
 
 	download := path.Join("catalog", slug, slug+".tar.gz")
-	size, err := writeTar(src, slug, filepath.Join(out, download))
+	size, err := writeTar(content, filepath.Join(out, download))
 	if err != nil {
 		return Entry{}, err
 	}
@@ -215,7 +228,7 @@ func buildDeck(catalog, out, slug, tree string) (Entry, error) {
 	}, nil
 }
 
-func writeTar(src, prefix, dst string) (int64, error) {
+func writeTar(src, dst string) (int64, error) {
 	var rels []string
 	err := filepath.Walk(src, func(p string, info os.FileInfo, err error) error {
 		if err != nil {
@@ -227,9 +240,6 @@ func writeTar(src, prefix, dst string) (int64, error) {
 		rel, err := filepath.Rel(src, p)
 		if err != nil {
 			return err
-		}
-		if rel == "index.yaml" {
-			return nil
 		}
 		rels = append(rels, rel)
 		return nil
@@ -257,7 +267,7 @@ func writeTar(src, prefix, dst string) (int64, error) {
 		if err != nil {
 			return 0, err
 		}
-		hdr.Name = prefix + "/" + filepath.ToSlash(rel)
+		hdr.Name = filepath.ToSlash(rel)
 		hdr.ModTime = time.Unix(0, 0)
 		if err := tw.WriteHeader(hdr); err != nil {
 			return 0, err
