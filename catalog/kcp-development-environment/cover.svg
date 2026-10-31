@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 375" role="img" aria-label="An Internal Developer Platform, The Hard Way">
+  <defs>
+    <linearGradient id="kcpbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f2027"/>
+      <stop offset="1" stop-color="#16323d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="375" fill="url(#kcpbg)"/>
+  <g stroke="#2e6f7e" stroke-width="1" opacity="0.25">
+    <path d="M0 60h600M0 120h600M0 180h600M0 240h600M0 300h600"/>
+    <path d="M75 0v375M150 0v375M225 0v375M300 0v375M375 0v375M450 0v375M525 0v375"/>
+  </g>
+  <g fill="none" stroke="#4fb6a8" stroke-width="2" opacity="0.85">
+    <circle cx="300" cy="150" r="26"/>
+    <path d="M300 176v34M300 210h-95v30M300 210h95v30M300 210v30"/>
+  </g>
+  <g fill="#0f2027" stroke="#4fb6a8" stroke-width="2">
+    <rect x="170" y="240" width="70" height="46" rx="4"/>
+    <rect x="265" y="240" width="70" height="46" rx="4"/>
+    <rect x="360" y="240" width="70" height="46" rx="4"/>
+  </g>
+  <g fill="#4fb6a8" opacity="0.55">
+    <rect x="182" y="256" width="46" height="5"/><rect x="182" y="268" width="30" height="5"/>
+    <rect x="277" y="256" width="46" height="5"/><rect x="277" y="268" width="30" height="5"/>
+    <rect x="372" y="256" width="46" height="5"/><rect x="372" y="268" width="30" height="5"/>
+  </g>
+  <text x="300" y="157" font-family="monospace" font-size="20" fill="#8be9d4" text-anchor="middle">kcp</text>
+  <text x="300" y="52" font-family="monospace" font-size="22" fill="#e8f4f2" text-anchor="middle">An Internal Developer Platform</text>
+  <text x="300" y="82" font-family="monospace" font-size="24" fill="#e8f4f2" text-anchor="middle">The Hard Way</text>
+  <text x="300" y="330" font-family="monospace" font-size="13" fill="#ff8b6b" text-anchor="middle">$ kubectl get secret postgres</text>
+  <text x="300" y="356" font-family="monospace" font-size="12" fill="#6f9aa5" text-anchor="middle">KCD Edinburgh</text>
+</svg>

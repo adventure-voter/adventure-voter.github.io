@@ -1,6 +1,23 @@
 {
-  "generated": "2026-06-15T06:27:52Z",
+  "generated": "2026-10-31T07:56:23Z",
   "presentations": [
+    {
+      "slug": "kcp-development-environment",
+      "title": "An Internal Developer Platform, The Hard Way",
+      "description": "Walk through a journey of figuring out how to handle multiple developers, variying environments and a large team with all sorts of requirements.",
+      "image": "catalog/kcp-development-environment/cover.svg",
+      "download": "catalog/kcp-development-environment/kcp-development-environment.tar.gz",
+      "size": 173841,
+      "updated": "2026-10-19T15:55:16+02:00",
+      "tags": [
+        "platform-engineering",
+        "external-secrets",
+        "kcp",
+        "kubernetes",
+        "developer-experience"
+      ],
+      "treeSha": "986a999477791cd8dd1297f3414633d476341f2e"
+    },
     {
       "slug": "getting-started",
       "title": "Getting Started",
